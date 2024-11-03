@@ -21,6 +21,7 @@ body {
   padding-left: 640px;
 
 }
+
 .msgbox{
     position: absolute; 
     top: 0; 
@@ -28,6 +29,11 @@ body {
     margin-left: 100px;
     width: 400px;
     height: 200px;
+    font-family: 'Press Start 2P';
+    background-color: blue;
+    color: yellow;
+    font-size: 20px;
+    border: 8px solid black;
 }
 
 .btn {
