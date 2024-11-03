@@ -71,6 +71,11 @@
                                     } else {
                                         result += '\n' + randomString;
                                     }
+                                    // Check for consecutive operators in the input 
+                                    if (/[\+\-\*\/]{2}/.test(form1.answer.value)) 
+                                    { 
+                                        result = randomString;
+                                    }
                                     form1.answer.value = result;
                                 }
                         };
