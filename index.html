@@ -23,7 +23,7 @@
         <form name = "form1"> 
             
                     <!-- This input box shows the button pressed by the user in calculator. --> 
-                    <input class="msgbox" id = "calc" type ="text" name = "answer" disabled> <br> <br> 
+                    <textarea class="msgbox" id = "calc" type ="text" name = "answer" disabled></textarea> <br> <br> 
                     <img class="robo" src="happy-dance-robot.gif" alt="robot" >
 
                     <!-- Display the calculator button on the screen. -->  
@@ -56,6 +56,7 @@
 
                         // Fetch JSON file
                         var xhr = new XMLHttpRequest();
+                        var count=0;
                         xhr.open('GET', 'strings.json', true);
                         xhr.onreadystatechange = function() {
                             if (xhr.readyState === 4 && xhr.status === 200) {
@@ -63,15 +64,15 @@
                                 var randomString = strings[Math.floor(Math.random() * strings.length)];
 
                                 // Add conditions based on length of result
-                                if (result.length > 6) {
-                                    result += '\n' + randomString;
-                                } else if (result.length > 4) {
-                                    result += '\n' + randomString;
-                                } else {
-                                    result += '\n' + randomString;
+                                    if (result.length > 6) {
+                                        result += '\n' + randomString;
+                                    } else if (result.length > 4) {
+                                        result += '\n' + randomString;
+                                    } else {
+                                        result += '\n' + randomString;
+                                    }
+                                    form1.answer.value = result;
                                 }
-                                form1.answer.value = result;
-                            }
                         };
                         xhr.send();
                     "> 
