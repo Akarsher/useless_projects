@@ -4,53 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                clifford: '#da373d',
+            }
+            }
+        }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--Row-->
     <div>
         <!--Left Col-->
             <div>
-                
+
             </div>
         <!--left col end-->
-
+            
         <!--rightt Col-->
+        <div class="container">
         <form name = "form1">  
       
             <!-- This input box shows the button pressed by the user in calculator. -->  
           <input id = "calc" type ="text" name = "answer"> <br> <br>  
           <!-- Display the calculator button on the screen. -->  
-          <!-- onclick() function display the number prsses by the user. -->  
-          <input type = "button" value = "1" onclick = "form1.answer.value += '1' ">  
-          <input type = "button" value = "2" onclick = "form1.answer.value += '2' ">  
-          <input type = "button" value = "3" onclick = "form1.answer.value += '3' ">  
-           <input type = "button" value = "+" onclick = "form1.answer.value += '+' ">  
+          <!-- onclick() function display the number prsses by the user. -->
+          <input class="btn" type = "button" value = "1" onclick = "form1.answer.value += '1' ">  
+          <input class="btn" type = "button" value = "2" onclick = "form1.answer.value += '2' ">  
+          <input class="btn" type = "button" value = "3" onclick = "form1.answer.value += '3' ">  
+           <input class="btn" type = "button" value = "+" onclick = "form1.answer.value += '+' ">  
           <br> <br>  
             
-          <input type = "button" value = "4" onclick = "form1.answer.value += '4' ">  
-          <input type = "button" value = "5" onclick = "form1.answer.value += '5' ">  
-          <input type = "button" value = "6" onclick = "form1.answer.value += '6' ">  
-          <input type = "button" value = "-" onclick = "form1.answer.value += '-' ">  
+          <input class="btn" type = "button" value = "4" onclick = "form1.answer.value += '4' ">  
+          <input class="btn" type = "button" value = "5" onclick = "form1.answer.value += '5' ">  
+          <input class="btn" type = "button" value = "6" onclick = "form1.answer.value += '6' ">  
+          <input class="btn" type = "button" value = "-" onclick = "form1.answer.value += '-' ">  
           <br> <br>  
             
-          <input type = "button" value = "7" onclick = "form1.answer.value += '7' ">  
-          <input type = "button" value = "8" onclick = "form1.answer.value += '8' ">  
-          <input type = "button" value = "9" onclick = "form1.answer.value += '9' ">  
-          <input type = "button" value = "*" onclick = "form1.answer.value += '*' ">  
+          <input class="btn" type = "button" value = "7" onclick = "form1.answer.value += '7' ">  
+          <input class="btn" type = "button" value = "8" onclick = "form1.answer.value += '8' ">  
+          <input class="btn" type = "button" value = "9" onclick = "form1.answer.value += '9' ">  
+          <input class="btn" type = "button" value = "*" onclick = "form1.answer.value += '*' ">  
           <br> <br>  
             
             
-          <input type = "button" value = "/" onclick = "form1.answer.value += '/' ">  
-          <input type = "button" value = "0" onclick = "form1.answer.value += '0' ">  
-            <input type = "button" value = "." onclick = "form1.answer.value += '.' ">  
+          <input class="btn" type = "button" value = "/" onclick = "form1.answer.value += '/' ">  
+          <input class="btn" type = "button" value = "0" onclick = "form1.answer.value += '0' ">  
+            <input class="btn" type = "button" value = "." onclick = "form1.answer.value += '.' ">  
             <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->  
-          <input type = "button" value = "=" onclick = "form1.answer.value = eval(form1.answer.value) ">  
+            <input class="btn" type="button" value="=" onclick="
+            var result = eval(form1.answer.value);
+
+            // Fetch JSON file
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'strings.json', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var strings = JSON.parse(xhr.responseText);
+                    var randomString = strings[Math.floor(Math.random() * strings.length)];
+
+                    // Add conditions based on length of result
+                    if (result.length > 10) {
+                        result += ' ' + randomString;
+                    } else if (result.length > 5) {
+                        result += ' ' + randomString;
+                    } else {
+                        result += ' ' + randomString;
+                    }
+                    form1.answer.value = result;
+                }
+            };
+            xhr.send();
+        "> 
           <br>   
           <!-- Display the Cancel button and erase all data entered by the user. -->  
-          <input type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >  
+          <input class="btn" type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >  
           <br>   
             
-        </form>  
+        </form> 
+        </div> 
         <!--right col end-->
     </div>
     <!--end row-->
