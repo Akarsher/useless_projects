@@ -58,15 +58,15 @@ When calculator performs a seqential number of calculations it closes the window
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://github.com/aadhi-i/useless_projects/blob/main/video.mp4 <br>
+It is the basic demonstration of the project,showcasing normal functionality of a calculator plus the mocking behaivior of a human being.
+When it feels it is fed up with the calculations it automatically closes the window with an alert.
 
-# Additional Demos
-[Add any extra demo materials/links]
+
 
 ## Team Contributions
- Adithya S Nair: Managed Git repository,Styling UI,Connected Calcuator with JSON library using JavaScript.
- Nandakumar S: Added calculator functionality,Documentation.
+ Adithya S Nair: Managed Git repository,Styling UI,Connected Calcuator with JSON library using JavaScript. <br>
+ Nandakumar S: Added calculator functionality,Documentation.<br>
  Akarsh Kumar E R:Built Basic HTML frame,Built JSON Library.
 
 ---
