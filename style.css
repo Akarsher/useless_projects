@@ -21,15 +21,14 @@ body {
   padding-left: 640px;
 
 }
-.row{
-    display: table;
-    clear: both;
+.msgbox{
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    margin-left: 100px;
+    width: 400px;
+    height: 200px;
 }
-.column {
-    float: left;
-    width: 50%;
-    padding: 100px;
-  }
 
 .btn {
   font-size: 1.2em;
