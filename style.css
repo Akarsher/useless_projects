@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
+html{
+    font-family: 'Press Start 2P';
+}
 body {
-  background: url(background.gif);
-  height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-size: 100vw 100vh;
+    background: url(./background.gif);
+    background-color: rgb(32, 31, 31);
+    background-repeat: no-repeat;
+    background-size: 1400px 800px;
+    background-position: center;
+    padding-top: 600px;
+  
 }
 
 .container {
@@ -14,7 +18,18 @@ body {
   left: 50%;
   position: absolute;
   transform: translate(-50%,-50%);
+  padding-left: 640px;
+
 }
+.row{
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding: 100px;
+  }
 
 .btn {
   font-size: 1.2em;
