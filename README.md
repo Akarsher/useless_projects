@@ -1,6 +1,6 @@
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
-# [Project Name] 🎯
+# Mocking Calculator 🎯
 
 
 ## Basic Details
@@ -13,13 +13,13 @@
 - Member 3: Akarsh Kumar E R - Muthoot Institute of Technology and Science
 
 ### Project Description
-[2-3 lines about what your project does]
+The Mocking Calculator is a fun, interactive calculator that not only performs basic arithmetic operations like addition, subtraction, multiplication, and division, but also teases and taunts the user with sarcastic or witty responses after each calculation. Every operation triggers a unique, humorous response, making simple math feel like a playful conversation
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+A normal calculator is useful but boring. It just shows the answer without any personality, making simple tasks feel repetitive and dull. There’s no fun or feedback—just plain results. 
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+We gave a human behavior to the calculator which makes it more fun and user friendly.
 
 ## Technical Details
 ### Technologies/Components Used
@@ -29,50 +29,32 @@ For Software:
 - [Libraries used]
 - VS Code,GitHub Copilot
 
-
-### Implementation
-For Software:
-# Installation
-[commands]
-
-# Run
-[commands]
-
 ### Project Documentation
-For Software:
+For Software:Web Browser
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+# Screenshots 
+Index Page
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![WhatsApp Image 2024-11-03 at 4 04 06 PM (1)](https://github.com/user-attachments/assets/f89bc3a8-aaa2-4020-a97e-3f309aee9343)
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+This is the landing interface of the website 
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
 
-For Hardware:
+OUTPUT
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
+![WhatsApp Image 2024-11-03 at 4 04 06 PM](https://github.com/user-attachments/assets/058a2e9d-f4cb-4a8f-90f0-7780a81e2a29)
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+Output Generated while performing a calculation 
 
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
 
-![Build](Add photos of build process here)
-*Explain the build steps*
+When Calulator is fed up!
 
-![Final](Add photo of final product here)
-*Explain the final build*
+![WhatsApp Image 2024-11-03 at 4 04 07 PM](https://github.com/user-attachments/assets/0a88f4a8-ec3e-4b89-9186-c0d09fef2b13)
+
+When calculator performs a seqential number of calculations it closes the window with an alert
+
+
+
 
 ### Project Demo
 # Video
@@ -83,9 +65,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+ Adithya S Nair: Managed Git repository,Styling UI,Connected Calcuator with JSON library using JavaScript.
+ Nandakumar S: Added calculator functionality,Documentation.
+ Akarsh Kumar E R:Built Basic HTML frame,Built JSON Library.
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
