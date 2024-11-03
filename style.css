@@ -32,8 +32,9 @@ body {
     font-family: 'Press Start 2P';
     background-color: blue;
     color: yellow;
-    font-size: 20px;
-    border: 2px solid black;
+    font-size: 50px;
+    
+    border: 10px solid black;
 }
 .robo{
     position: absolute; 
