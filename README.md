@@ -4,13 +4,13 @@
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Bug Busters
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Adithya S Nair - Muthoot Institute of Technology and Science 
+- Member 2: Nandakumar S - Muthoot Institute of Technology and Science
+- Member 3: Akarsh Kumar E R - Muthoot Institute of Technology and Science
 
 ### Project Description
 [2-3 lines about what your project does]
@@ -24,15 +24,11 @@
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
+- HTML , CSS , JavaScript
+- Tailwind CSS
 - [Libraries used]
-- [Tools used]
+- VS Code,GitHub Copilot
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
 
 ### Implementation
 For Software:
