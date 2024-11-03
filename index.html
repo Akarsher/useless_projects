@@ -51,36 +51,7 @@
                     <input class="btn" type = "button" value = "0" onclick = "form1.answer.value += '0' ">  
                         <input class="btn" type = "button" value = "." onclick = "form1.answer.value += '.' ">  
                         <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->  
-                        <input class="btn" style="background-color: green;" type="button" value="=" onclick="
-                        var result = eval(form1.answer.value);
-
-                        // Fetch JSON file
-                        var xhr = new XMLHttpRequest();
-                        var count=0;
-                        xhr.open('GET', 'strings.json', true);
-                        xhr.onreadystatechange = function() {
-                            if (xhr.readyState === 4 && xhr.status === 200) {
-                                var strings = JSON.parse(xhr.responseText);
-                                var randomString = strings[Math.floor(Math.random() * strings.length)];
-
-                                // Add conditions based on length of result
-                                    if (result.length > 6) {
-                                        result += '\n' + randomString;
-                                    } else if (result.length > 4) {
-                                        result += '\n' + randomString;
-                                    } else {
-                                        result += '\n' + randomString;
-                                    }
-                                    // Check for consecutive operators in the input 
-                                    if (/[\+\-\*\/]{2}/.test(form1.answer.value)) 
-                                    { 
-                                        result = randomString;
-                                    }
-                                    form1.answer.value = result;
-                                }
-                        };
-                        xhr.send();
-                    "> 
+                        <input class="btn" style="background-color: green;" type="button" value="=" onclick="calculate()"> 
                     <br>   
                     <!-- Display the Cancel button and erase all data entered by the user. -->  
                     <input class="btn" style="background-color: rgb(209, 20, 20); margin-top: 10px;" type = "button" value = "C" onclick = "form1.answer.value = ' ' " id= "clear" >  
@@ -88,5 +59,49 @@
                     
                 </form> 
             </div> 
+            <script>
+                let updateCounter = 0;
+
+                function calculate() {
+                    var result = eval(form1.answer.value);
+
+                    // Fetch JSON file
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'strings.json', true);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 200) {
+                            var strings = JSON.parse(xhr.responseText);
+                            var randomString = strings[Math.floor(Math.random() * strings.length)];
+
+                            // Add conditions based on length of result
+                            if (result.length > 6) {
+                                result += '\n' + randomString;
+                            } else if (result.length > 4) {
+                                result += '\n' + randomString;
+                            } else {
+                                result += '\n' + randomString;
+                            }
+
+                            // Check for consecutive operators in the input
+                            if (/[\+\-\*\/]{2}/.test(form1.answer.value)) {
+                                form1.answer.value = randomString;
+                            } else {
+                                form1.answer.value = result;
+                            }
+
+                            // Increment the counter
+                            updateCounter++;
+
+                            // Check if the counter has reached 6 calculations
+                            if (updateCounter > 6) {
+                                alert("I'm DONE WITH THIS !!");
+                                window.close(); // Close the website
+                            }
+                        }
+                    };
+                    xhr.send();
+                }
+
+            </script>
 </body>
 </html>
