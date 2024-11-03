@@ -12,6 +12,14 @@ body {
     padding-top: 600px;
   
 }
+.main{
+  text-align: center;
+  color: yellow;
+}
+.heading{
+  font-size: 60px;
+  font-family: 'Press Start 2P';
+}
 
 .container {
   top: 50%;
