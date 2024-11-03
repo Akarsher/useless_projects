@@ -20,10 +20,12 @@
 </head>
 <body>
     <div class="container">
-        <form name = "form1">  
+        <form name = "form1"> 
             
-                    <!-- This input box shows the button pressed by the user in calculator. -->  
-                    <input class="msgbox" id = "calc" type ="text" name = "answer"> <br> <br>  
+                    <!-- This input box shows the button pressed by the user in calculator. --> 
+                    <textarea class="msgbox" id = "calc" type ="text" name = "answer" disabled></textarea> <br> <br> 
+                    <img class="robo" src="happy-dance-robot.gif" alt="robot" >
+
                     <!-- Display the calculator button on the screen. -->  
                     <!-- onclick() function display the number prsses by the user. -->
                     <input class="btn" type = "button" value = "1" onclick = "form1.answer.value += '1' ">  
@@ -49,11 +51,12 @@
                     <input class="btn" type = "button" value = "0" onclick = "form1.answer.value += '0' ">  
                         <input class="btn" type = "button" value = "." onclick = "form1.answer.value += '.' ">  
                         <!-- When we click on the '=' button, the onclick() shows the sum results on the calculator screen. -->  
-                        <input class="btn" type="button" value="=" onclick="
+                        <input class="btn" style="background-color: green;" type="button" value="=" onclick="
                         var result = eval(form1.answer.value);
 
                         // Fetch JSON file
                         var xhr = new XMLHttpRequest();
+                        var count=0;
                         xhr.open('GET', 'strings.json', true);
                         xhr.onreadystatechange = function() {
                             if (xhr.readyState === 4 && xhr.status === 200) {
@@ -61,21 +64,26 @@
                                 var randomString = strings[Math.floor(Math.random() * strings.length)];
 
                                 // Add conditions based on length of result
-                                if (result.length > 6) {
-                                    result += ' ' + randomString;
-                                } else if (result.length > 4) {
-                                    result += ' ' + randomString;
-                                } else {
-                                    result += ' ' + randomString;
+                                    if (result.length > 6) {
+                                        result += '\n' + randomString;
+                                    } else if (result.length > 4) {
+                                        result += '\n' + randomString;
+                                    } else {
+                                        result += '\n' + randomString;
+                                    }
+                                    // Check for consecutive operators in the input 
+                                    if (/[\+\-\*\/]{2}/.test(form1.answer.value)) 
+                                    { 
+                                        result = randomString;
+                                    }
+                                    form1.answer.value = result;
                                 }
-                                form1.answer.value = result;
-                            }
                         };
                         xhr.send();
                     "> 
                     <br>   
                     <!-- Display the Cancel button and erase all data entered by the user. -->  
-                    <input class="btn" type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' " id= "clear" >  
+                    <input class="btn" style="background-color: rgb(209, 20, 20); margin-top: 10px;" type = "button" value = "C" onclick = "form1.answer.value = ' ' " id= "clear" >  
                     <br>   
                     
                 </form> 
